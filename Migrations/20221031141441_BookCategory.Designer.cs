@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Pop_Darius_Victor_Lab2.Data;
+using Pavel_Eduard_Cristian_Lab2.Data;
 
 #nullable disable
 
-namespace Pop_Darius_Victor_Lab2.Migrations
+namespace Pavel_Eduard_Cristian_Lab2.Migrations
 {
-    [DbContext(typeof(Pop_Darius_Victor_Lab2Context))]
+    [DbContext(typeof(Pavel_Eduard_Cristian_Lab2Context))]
     [Migration("20221031141441_BookCategory")]
     partial class BookCategory
     {
@@ -24,7 +24,7 @@ namespace Pop_Darius_Victor_Lab2.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Pop_Darius_Victor_Lab2.Models.Author", b =>
+            modelBuilder.Entity("Pavel_Eduard_Cristian_Lab2.Models.Author", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -45,7 +45,7 @@ namespace Pop_Darius_Victor_Lab2.Migrations
                     b.ToTable("Author");
                 });
 
-            modelBuilder.Entity("Pop_Darius_Victor_Lab2.Models.Book", b =>
+            modelBuilder.Entity("Pavel_Eduard_Cristian_Lab2.Models.Book", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -78,7 +78,7 @@ namespace Pop_Darius_Victor_Lab2.Migrations
                     b.ToTable("Book");
                 });
 
-            modelBuilder.Entity("Pop_Darius_Victor_Lab2.Models.BookCategory", b =>
+            modelBuilder.Entity("Pavel_Eduard_Cristian_Lab2.Models.BookCategory", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -101,7 +101,7 @@ namespace Pop_Darius_Victor_Lab2.Migrations
                     b.ToTable("BookCategory");
                 });
 
-            modelBuilder.Entity("Pop_Darius_Victor_Lab2.Models.Category", b =>
+            modelBuilder.Entity("Pavel_Eduard_Cristian_Lab2.Models.Category", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -118,7 +118,7 @@ namespace Pop_Darius_Victor_Lab2.Migrations
                     b.ToTable("Category");
                 });
 
-            modelBuilder.Entity("Pop_Darius_Victor_Lab2.Models.Publisher", b =>
+            modelBuilder.Entity("Pavel_Eduard_Cristian_Lab2.Models.Publisher", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -135,13 +135,13 @@ namespace Pop_Darius_Victor_Lab2.Migrations
                     b.ToTable("Publisher");
                 });
 
-            modelBuilder.Entity("Pop_Darius_Victor_Lab2.Models.Book", b =>
+            modelBuilder.Entity("Pavel_Eduard_Cristian_Lab2.Models.Book", b =>
                 {
-                    b.HasOne("Pop_Darius_Victor_Lab2.Models.Author", "Author")
+                    b.HasOne("Pavel_Eduard_Cristian_Lab2.Models.Author", "Author")
                         .WithMany("Books")
                         .HasForeignKey("AuthorID");
 
-                    b.HasOne("Pop_Darius_Victor_Lab2.Models.Publisher", "Publisher")
+                    b.HasOne("Pavel_Eduard_Cristian_Lab2.Models.Publisher", "Publisher")
                         .WithMany("Books")
                         .HasForeignKey("PublisherID");
 
@@ -150,15 +150,15 @@ namespace Pop_Darius_Victor_Lab2.Migrations
                     b.Navigation("Publisher");
                 });
 
-            modelBuilder.Entity("Pop_Darius_Victor_Lab2.Models.BookCategory", b =>
+            modelBuilder.Entity("Pavel_Eduard_Cristian_Lab2.Models.BookCategory", b =>
                 {
-                    b.HasOne("Pop_Darius_Victor_Lab2.Models.Book", "Book")
+                    b.HasOne("Pavel_Eduard_Cristian_Lab2.Models.Book", "Book")
                         .WithMany("BookCategories")
                         .HasForeignKey("BookID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Pop_Darius_Victor_Lab2.Models.Category", "Category")
+                    b.HasOne("Pavel_Eduard_Cristian_Lab2.Models.Category", "Category")
                         .WithMany("BookCategories")
                         .HasForeignKey("CategoryID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -169,22 +169,22 @@ namespace Pop_Darius_Victor_Lab2.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("Pop_Darius_Victor_Lab2.Models.Author", b =>
+            modelBuilder.Entity("Pavel_Eduard_Cristian_Lab2.Models.Author", b =>
                 {
                     b.Navigation("Books");
                 });
 
-            modelBuilder.Entity("Pop_Darius_Victor_Lab2.Models.Book", b =>
+            modelBuilder.Entity("Pavel_Eduard_Cristian_Lab2.Models.Book", b =>
                 {
                     b.Navigation("BookCategories");
                 });
 
-            modelBuilder.Entity("Pop_Darius_Victor_Lab2.Models.Category", b =>
+            modelBuilder.Entity("Pavel_Eduard_Cristian_Lab2.Models.Category", b =>
                 {
                     b.Navigation("BookCategories");
                 });
 
-            modelBuilder.Entity("Pop_Darius_Victor_Lab2.Models.Publisher", b =>
+            modelBuilder.Entity("Pavel_Eduard_Cristian_Lab2.Models.Publisher", b =>
                 {
                     b.Navigation("Books");
                 });

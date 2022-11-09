@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Pop_Darius_Victor_Lab2.Migrations
+namespace Pavel_Eduard_Cristian_Lab2.Migrations
 {
     public partial class InitialCreate : Migration
     {

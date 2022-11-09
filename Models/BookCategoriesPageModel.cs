@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using Pop_Darius_Victor_Lab2.Data;
+using Pavel_Eduard_Cristian_Lab2.Data;
 
-namespace Pop_Darius_Victor_Lab2.Models
+namespace Pavel_Eduard_Cristian_Lab2.Models
 {
     public class BookCategoriesPageModel : PageModel
     {
         public List<AssignedCategoryData> AssignedCategoryDataList;
-        public void PopulateAssignedCategoryData(Pop_Darius_Victor_Lab2Context context,
+        public void PopulateAssignedCategoryData(Pavel_Eduard_Cristian_Lab2Context context,
         Book book)
         {
             var allCategories = context.Category;
@@ -23,7 +23,7 @@ namespace Pop_Darius_Victor_Lab2.Models
                 });
             }
         }
-        public void UpdateBookCategories(Pop_Darius_Victor_Lab2Context context,
+        public void UpdateBookCategories(Pavel_Eduard_Cristian_Lab2Context context,
         string[] selectedCategories, Book bookToUpdate)
         {
             if (selectedCategories == null)

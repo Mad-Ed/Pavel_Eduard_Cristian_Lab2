@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Pop_Darius_Victor_Lab2.Data;
-using Pop_Darius_Victor_Lab2.Models;
+using Pavel_Eduard_Cristian_Lab2.Data;
+using Pavel_Eduard_Cristian_Lab2.Models;
 
-namespace Pop_Darius_Victor_Lab2.Pages.Publishers
+namespace Pavel_Eduard_Cristian_Lab2.Pages.Publishers
 {
     public class CreateModel : PageModel
     {
-        private readonly Pop_Darius_Victor_Lab2.Data.Pop_Darius_Victor_Lab2Context _context;
+        private readonly Pavel_Eduard_Cristian_Lab2.Data.Pavel_Eduard_Cristian_Lab2Context _context;
 
-        public CreateModel(Pop_Darius_Victor_Lab2.Data.Pop_Darius_Victor_Lab2Context context)
+        public CreateModel(Pavel_Eduard_Cristian_Lab2.Data.Pavel_Eduard_Cristian_Lab2Context context)
         {
             _context = context;
         }

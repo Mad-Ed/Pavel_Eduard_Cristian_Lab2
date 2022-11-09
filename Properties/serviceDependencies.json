@@ -2,7 +2,7 @@
   "dependencies": {
     "mssql1": {
       "type": "mssql",
-      "connectionId": "ConnectionStrings:Pop_Darius_Victor_Lab2Context"
+      "connectionId": "ConnectionStrings:Pavel_Eduard_Cristian_Lab2Context"
     }
   }
 }

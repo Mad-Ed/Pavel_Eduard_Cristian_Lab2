@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 
-namespace Pop_Darius_Victor_Lab2.Models
+namespace Pavel_Eduard_Cristian_Lab2.Models
 {
     public class Author
     {

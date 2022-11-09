@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Pop_Darius_Victor_Lab2.Data;
+using Pavel_Eduard_Cristian_Lab2.Data;
 
 #nullable disable
 
-namespace Pop_Darius_Victor_Lab2.Migrations
+namespace Pavel_Eduard_Cristian_Lab2.Migrations
 {
-    [DbContext(typeof(Pop_Darius_Victor_Lab2Context))]
+    [DbContext(typeof(Pavel_Eduard_Cristian_Lab2Context))]
     [Migration("20221018130230_InitialCreate")]
     partial class InitialCreate
     {
@@ -23,7 +23,7 @@ namespace Pop_Darius_Victor_Lab2.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Pop_Darius_Victor_Lab2.Models.Book", b =>
+            modelBuilder.Entity("Pavel_Eduard_Cristian_Lab2.Models.Book", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()

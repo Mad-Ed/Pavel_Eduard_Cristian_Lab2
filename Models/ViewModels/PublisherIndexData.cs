@@ -1,4 +1,4 @@
-﻿namespace Pop_Darius_Victor_Lab2.Models.ViewModels
+﻿namespace Pavel_Eduard_Cristian_Lab2.Models.ViewModels
 {
     public class PublisherIndexData
     {

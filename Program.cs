@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Pop_Darius_Victor_Lab2.Data;
+using Pavel_Eduard_Cristian_Lab2.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<Pop_Darius_Victor_Lab2Context>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Pop_Darius_Victor_Lab2Context") ?? throw new InvalidOperationException("Connection string 'Pop_Darius_Victor_Lab2Context' not found.")));
+builder.Services.AddDbContext<Pavel_Eduard_Cristian_Lab2Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Pavel_Eduard_Cristian_Lab2Context") ?? throw new InvalidOperationException("Connection string 'Pavel_Eduard_Cristian_Lab2Context' not found.")));
 
 var app = builder.Build();
 
